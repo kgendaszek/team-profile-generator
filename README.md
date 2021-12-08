@@ -32,8 +32,11 @@ Vist my gitHub page at https://github.com/kgendaszek!
 To test, use the command line.
 
 ## **Website**
+https://github.com/kgendaszek/team-profile-generator
+
+https://watch.screencastify.com/v/sJTek99LdmWy7q5xXm2u
 
 
 
 ## **License**
-
+[License](LICENSE)

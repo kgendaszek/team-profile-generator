@@ -60,7 +60,7 @@ function appMenu() {
       },
       {
         type: "input",
-        name: "managerOfficeNumber",
+        name: "managerOffice",
         message: "What is the team manager's office number?",
         validate: answer => {
           const pass = answer.match(
@@ -75,13 +75,18 @@ function appMenu() {
     ]).then(answers => {
       // TODO: YOUR CODE HERE
       // create a manager object from class Engineer
-
+      const manager =  new Manager(
+        answers.managerName,
+        answers.managerId,
+        answers.managerEmail,
+        answers.managerOffice
+      );
       // TODO: YOUR CODE HERE
       // add the manager object to teamMembers
-      teamMembers.push(Manager)
+      teamMembers.push(manager)
       // TODO: YOUR CODE HERE
       // add manager id to idArray
-      idArray.push("managerId")
+      idArray.push(answers.managerId)
       createTeam();
     });
   }
@@ -169,8 +174,14 @@ function appMenu() {
       }
     ]).then(answers => {
       // TODO: YOUR CODE HERE
-      teamMembers.push(Engineer)
-      idArray.push("engineerId")
+      const engineer =  new Engineer(
+        answers.engineerName,
+        answers.engineerId,
+        answers.engineerEmail,
+        answers.engineerGitHub
+      );
+      teamMembers.push(engineer)
+      idArray.push(answers.engineerId)
       // create an engineer object from class Engineer
 
       // TODO: YOUR CODE HERE
@@ -238,8 +249,14 @@ function appMenu() {
         }
       }
     ]).then(answers => {
-      teamMembers.push(Intern)
-      idArray.push("internId")
+      const intern =  new Intern(
+        answers.internName,
+        answers.internId,
+        answers.internEmail,
+        answers.internSchool
+      );
+      teamMembers.push(intern)
+      idArray.push(answers.internId)
       // TODO: YOUR CODE HERE
       // create an intern object from class Engineer
 
